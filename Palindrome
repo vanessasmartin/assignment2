@@ -1,7 +1,3 @@
-//Vanessa Martin MW9 23586058
-//Check to see if string is a palindrome
-
-
 import java.util.Scanner;
 import java.util.Stack;
 
