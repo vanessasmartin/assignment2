@@ -1,0 +1,50 @@
+//Vanessa Martin MW9 23586058
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class mergeQueue
+{
+	public static void main(String[] args) {
+	
+	Queue <Integer> list1 = new LinkedList <Integer>();  //LIST 1
+	
+	 for (int i=0; i<5; i++) {
+        list1.add(i); 
+}
+	
+	Queue <Integer> list2 = new LinkedList<Integer>(); //LIST2
+	 for (int i=0; i<5; i++) {
+        list2.add(i+10); 
+}
+
+    Queue <Integer> merged = new LinkedList<Integer>();
+    
+            while (!list1.isEmpty() && !list2.isEmpty()) {   //MERGE LISTS
+            int left = list1.peek();
+            int right = list2.peek();
+
+            if (left <  right) {
+                merged.add(list1.poll());
+            } else {
+                merged.add(list2.poll());
+            }
+        }
+
+      
+        while (!list1.isEmpty()) {
+            merged.add(list1.poll());
+        }
+
+        while (!list2.isEmpty()) {
+            merged.add(list2.poll());
+        }
+	
+    System.out.println(merged);
+	
+	
+    }
+        
+        
+	
+}
